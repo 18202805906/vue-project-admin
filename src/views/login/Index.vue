@@ -39,9 +39,9 @@
     <div class="bottom r-nw-c-c">
       <span @click="isShowModal=true">版本号: <span class="version">{{ appTitle }} {{ version }}</span></span>
     </div>
-    <a-modal v-model="isShowModal" title="更新日志" :footer="null" :width="800">
+    <!-- <a-modal v-model="isShowModal" title="更新日志" :footer="null" :width="800">
         <update-log></update-log>
-    </a-modal>
+    </a-modal> -->
   </div>
 </template>
 
@@ -99,7 +99,7 @@ export default {
         ]
       },
       loading: false,
-      configTitle: '服务聚合V2.0',
+      configTitle: 'vue2+antd后台管理系统V1.0',
       appTitle: config.appTitle,
       version: config.appVersion,
       codeSrc: '',

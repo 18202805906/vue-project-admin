@@ -3,7 +3,7 @@ const IS_PRODUCTION = env.NODE_ENV === 'production';
 const baseUrl = IS_PRODUCTION ? env.VUE_APP_API_HOST : env.VUE_APP_API_ROOT;
 const pkg = require('../../package');
 const baseConfig = {
-  appTitle: '服务聚合系统', // 应用名称，用于显示在浏览器标签
+  appTitle: 'vue2+antd后台管理系统', // 应用名称，用于显示在浏览器标签
   appVersion: pkg.version,
   cryptoKey: '', // 密码加密使用的盐
   baseUrl
