@@ -46,9 +46,9 @@
       <span @click="showVersions">版本号: <span class="version">{{ appTitle }} {{ version }}</span></span>
     </div>
   </div>
-  <a-modal v-model:visible="isShowModal" title="更新日志" :footer="null" width="800px">
+  <!-- <a-modal v-model:visible="isShowModal" title="更新日志" :footer="null" width="800px">
       <update-log></update-log>
-  </a-modal>
+  </a-modal> -->
 </template>
 
 <script>
@@ -111,7 +111,7 @@ export default defineComponent ({
         ]
       },
       loading: false,
-      configTitle: '服务聚合V2.0',
+      configTitle: 'vue3+antd后台管理系统V1.0',
       appTitle: config.appTitle,
       version: config.appVersion,
       codeSrc: '',
