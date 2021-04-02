@@ -1,0 +1,86 @@
+@import './_flex.less';
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(10px);
+}
+//修改表格分页位置
+
+.page-control {
+  margin-bottom: 4px;
+  .space {
+    margin: 0 4px;
+  }
+}
+// 原子样式
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.fn {
+  float: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.vertical-mid {
+  vertical-align: middle;
+}
+.vertical-top {
+  vertical-align: top;
+}
+.vertical-bottom {
+  vertical-align: bottom;
+}
+.vertical-baseline {
+  vertical-align: baseline;
+}
+.width-full {
+  width: 100%;
+}
+.text-primary {
+  color: #1b90ff;
+}
+.divider-primary {
+  background: @primary-color;
+}
+
+//修改滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  }
+//滚动条的滑块
+::-webkit-scrollbar-thumb {
+background-color: #c1c1c1;
+border-radius: 4px;
+}

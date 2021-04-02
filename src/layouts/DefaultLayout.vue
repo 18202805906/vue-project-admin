@@ -1,0 +1,42 @@
+<template>
+  <a-layout class="layout">
+    <a-layout-sider :theme="theme" v-model="collapse" :trigger="null" collapsible breakpoint="lg">
+      <l-logo :mini="collapse"></l-logo>
+      <l-sider :menus="menus" :theme="theme" v-model:collapse.sync="collapse" :open-keys="openeds" :selected-keys="curtMenuKey"></l-sider>
+    </a-layout-sider>
+    <a-layout class="layout-main">
+      <l-header v-model:collapse.sync="collapse" :bread-crumb="parentMenus" />
+      <div class="app-scroll-wrap">
+        <l-bread-crumb :data="parentMenus" />
+        <div class="app-main">
+          <transition mode="out-in" name="fade-transform">
+            <router-view></router-view>
+          </transition>
+        </div>
+      </div>
+      <!-- <l-footer></l-footer> -->
+    </a-layout>
+  </a-layout>
+</template>
+<script>
+import LayoutMinxin from '@/mixins/layout.mixin';
+import { defineComponent } from 'vue';
+export default defineComponent ({
+  name: 'default-layout',
+  mixins:[LayoutMinxin()]
+});
+</script>
+<style lang="scss" scoped>
+@import url('../assets/style/layout.less');
+.app-scroll-wrap {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+.app-main {
+  overflow-y: auto;
+  padding: 16px;
+  //margin: 20px;
+  border-radius: 5px;
+  //background: #fff;
+}
+</style>
