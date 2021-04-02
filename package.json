@@ -1,0 +1,88 @@
+{
+  "name": "gateway-web",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "serve:mock": "vue-cli-service serve --mode mock",
+    "build": "vue-cli-service build",
+    "build:report": "vue-cli-service build --report && serve dist",
+    "lint": "vue-cli-service lint",
+    "commit": "git add . && git-cz",
+    "deploy:test": "misthin deploy -m test",
+    "release": "standard-version --infile docs/CHANGELOG.md"
+  },
+  "dependencies": {
+    "@bwrong/auth-tool": "^1.2.2",
+    "ant-design-vue": "^1.7.2",
+    "axios": "^0.21.1",
+    "core-js": "^3.8.3",
+    "crypto-js": "^4.0.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "nprogress": "^0.2.0",
+    "qiankun": "^2.4.0",
+    "qs": "^6.9.6",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@bwrong/mock": "0.0.14",
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-plugin-eslint": "^4.5.11",
+    "@vue/cli-plugin-router": "^4.5.11",
+    "@vue/cli-plugin-vuex": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "antd-dayjs-webpack-plugin": "^1.0.6",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.3",
+    "compression-webpack-plugin": "^6.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "git-revision-webpack-plugin": "^3.0.6",
+    "husky": "^4.3.8",
+    "less": "^4.1.1",
+    "less-loader": "^6.2.0",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.6",
+    "sass-loader": "^10.1.1",
+    "standard-version": "^9.1.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": false
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "src/**/*.js?(x)": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{css,less,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "serviceSign": "<p>接口发布以后对外暴露的地址，</p><p>即接口调用方可见的调用地址！</p>",
+  "serviceProxyAddr": "接口发布方 发布到平台上的接口的原始地址，不会对外暴露！",
+  "serviceReturnResult": "与被代理的原始接口保持一致，一般为 xml 或json格式！",
+  "serviceGenerateSign": "接口发布以后对外暴露的地址，即接口调用方可见的调用地址！",
+  "serviceGenerateReturnResult": "与被代理的原始接口保持一致，一般为 xml 或json格式！",
+  "interfaceProxyAddr": "请求路径!",
+  "dataSourceURL": "由数据源 ip、端口、用户名、密码以及连接参数等拼接而成。用于连接数据源的最终信息，一般由系统自动拼接即可！<br />例如：jdbc:mysql://:22/",
+  "whiteListSourceIp": "接口访问方的服务器地址！",
+
+  "moduleCustom": "包含全包名、类名在类的完成描述一个类的信息如:com.xxx.xxx.Say.hello！",
+  "moduleConfig": "来源于国家接口平台的授权信息，对应的字段为：<br />appKey: 应用公钥,是用来做认证用的<br />sid:  是接口编码<br />rid: 是请求者标识",
+  "moduleConfigs": "来源于国家接口平台的授权信息，对应的字段为：<br />appkey:租户接口资源秘钥,资源共享服务中心分配<br />userName:租户码，资源共享服务中心分配<br />password:租户密码，资源共享服务中心分配",
+  "deptLevelInfo": "选择该选项时，可能会有部分接口、应用未显示，因为一些旧的接口没有勾选对应的层级",
+
+
+  "dayMessage": "选择该选项时，表示每天的该时间段内接受访问！",
+  "weekMessage": "选择该选项时，表示每周的所选日的开放时段内接受访问！",
+  "JSONsample": "标准的JSON对象格式例如:<br />{\"number\":6,\"null\":null,\"string\":\"hdshh\",\"boolean\":true,\"array\":[\"shanghai\",\"chengdu\",\"chongqing\"],\"obj\":{}}"
+}
